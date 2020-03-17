@@ -1,18 +1,19 @@
-import datetime
-import smtplib
-username ="<your email>"
-password ="<your password"
+#import the package smtplib
+import smtplib 
 
+username ="<your email>" #define username as email you want to use as senders
+password ="<your password>" #define password as password for 'username'
 
-list =["geodygantira@gmail.com", "farellgantara@gmail.com","rosadiagungnugraha@gmail.com", "zmnfrhd@gmail.com","amaliaprady@gmail.com"]
-for i in list:
+list =[""] #this is list of the receivers of your email
+
+for i in list: 
     smtp = smtplib.SMTP('smtp.gmail.com', 587)
-    smtp.ehlo()
+    smtp.ehlo() 
     smtp.starttls()
     smtp.login(username,password)
 
-    subject = 'Ngingetin bayar spotify'
-    body = 'Jangan lupa bayar spotify yaa, deadline pembayaran tanggal 25 setiap bulannya. Pembayaran sebesar Rp 15000 bisa ke \n BTPN/Jenius 90014085011 a.n R Geody Achmad G, $geodygantira \n BNI : 0506203337 , BNI a.n. R Geody Achmad Gantira \n Go-Pay 081221071998 \n makasih, stay safee'
+    subject = '<the subject of your email'
+    body = '<the body of your email>'
 
     msg = f'subject: {subject}\n\n{body}'
 
