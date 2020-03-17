@@ -1,0 +1,24 @@
+import datetime
+import smtplib
+username ="geodygantira@gmail.com"
+password ="Bearmango21"
+
+
+list =["geodygantira@gmail.com", "farellgantara@gmail.com","rosadiagungnugraha@gmail.com", "zmnfrhd@gmail.com","amaliaprady@gmail.com"]
+for i in list:
+    smtp = smtplib.SMTP('smtp.gmail.com', 587)
+    smtp.ehlo()
+    smtp.starttls()
+    smtp.login(username,password)
+
+    subject = 'Ngingetin bayar spotify'
+    body = 'Jangan lupa bayar spotify yaa, deadline pembayaran tanggal 25 setiap bulannya. Pembayaran sebesar Rp 15000 bisa ke \n BTPN/Jenius 90014085011 a.n R Geody Achmad G, $geodygantira \n BNI : 0506203337 , BNI a.n. R Geody Achmad Gantira \n Go-Pay 081221071998 \n makasih, stay safee'
+
+    msg = f'subject: {subject}\n\n{body}'
+
+    smtp.sendmail(username, [i], msg)
+    print('email sent')
+
+
+
+
