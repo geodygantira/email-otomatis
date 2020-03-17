@@ -1,7 +1,7 @@
 import datetime
 import smtplib
-username ="geodygantira@gmail.com"
-password ="Bearmango21"
+username ="<your email>"
+password ="<your password"
 
 
 list =["geodygantira@gmail.com", "farellgantara@gmail.com","rosadiagungnugraha@gmail.com", "zmnfrhd@gmail.com","amaliaprady@gmail.com"]
